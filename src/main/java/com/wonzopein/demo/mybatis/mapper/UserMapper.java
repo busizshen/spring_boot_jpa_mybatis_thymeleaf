@@ -4,10 +4,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by seunghyeonoh on 15. 7. 22..
+ * The interface User mapper.
  */
 public interface UserMapper {
 
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
     List<Map> getUser();
 
 }

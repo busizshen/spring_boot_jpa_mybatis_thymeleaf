@@ -14,19 +14,28 @@ import java.util.List;
 import java.util.function.Consumer;
 
 /**
- * Created by seunghyeonoh on 15. 8. 4..
+ * The type Home controller.
  */
 @Controller
 public class HomeController {
 
     private static final Logger log = Logger.getLogger(HomeController.class);
 
+    /**
+     * The User mapper.
+     */
     @Autowired
     UserMapper userMapper;
 
+    /**
+     * The User repository.
+     */
     @Autowired
     UserRepository userRepository;
 
+    /**
+     * Init void.
+     */
     @PostConstruct
     void init(){
         userRepository.save( new User("1","user1"));
@@ -36,6 +45,12 @@ public class HomeController {
         userRepository.save( new User("5","user5"));
     }
 
+    /**
+     * Home string.
+     *
+     * @param model the model
+     * @return the string
+     */
     @RequestMapping("/")
     String home(Model model){
 

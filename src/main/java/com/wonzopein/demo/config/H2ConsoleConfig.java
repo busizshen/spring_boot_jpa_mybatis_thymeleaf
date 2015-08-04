@@ -7,10 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
- * Author : $author
- * Create Date : $date
- *
- * The type H 2 console.
+ * The type H 2 console config.
  */
 @Configuration
 @EnableWebMvc

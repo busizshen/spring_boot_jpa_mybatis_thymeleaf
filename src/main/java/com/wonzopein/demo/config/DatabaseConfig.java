@@ -15,18 +15,23 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 /**
- * Author : $author
- * Create Date : $date
- *
- * The type H 2 console.
+ * The type Database config.
  */
 @Configuration
 @EnableTransactionManagement
 public class DatabaseConfig {
 
+    /**
+     * The Env.
+     */
     @Autowired
     Environment env;
 
+    /**
+     * Data source.
+     *
+     * @return the data source
+     */
     @Bean
     public DataSource dataSource() {
 
@@ -38,6 +43,11 @@ public class DatabaseConfig {
         return ds;
     }
 
+    /**
+     * Entity manager factory.
+     *
+     * @return the local container entity manager factory bean
+     */
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(){
 
@@ -60,6 +70,11 @@ public class DatabaseConfig {
         return factory;
     }
 
+    /**
+     * Transaction manager.
+     *
+     * @return the jpa transaction manager
+     */
     @Bean
     public JpaTransactionManager transactionManager(){
           return new JpaTransactionManager();
