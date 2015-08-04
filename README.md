@@ -17,6 +17,5 @@
 6. Lombok
 
 ##4. 실행방법
-git clone https://github.com/wonzopein/spring_jpa_mybatis_thymeleaf.git
-
-mvn spring-boot:run
+1. git clone https://github.com/wonzopein/spring_jpa_mybatis_thymeleaf.git
+2. mvn spring-boot:run
