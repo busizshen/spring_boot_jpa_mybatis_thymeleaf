@@ -1,0 +1,33 @@
+# ---------------------------------------
+# Profiles : Base
+# ---------------------------------------
+
+base.package: com.wonzopein.demo
+
+spring:
+  profiles:
+    active : dev
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    format-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:~/sample1
+    username: sa
+    password:
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-location: classpath:mybatis/mapper/**/*.xml
+
+server.port: 8080
+
+logging:
+  level.com.wonzopein.demo: DEBUG
