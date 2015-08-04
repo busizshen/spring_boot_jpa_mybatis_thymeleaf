@@ -6,9 +6,11 @@ import com.wonzopein.demo.repository.UserRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.PostConstruct;
+import java.util.List;
 import java.util.function.Consumer;
 
 /**
@@ -35,19 +37,25 @@ public class HomeController {
     }
 
     @RequestMapping("/")
-    String home(){
+    String home(Model model){
 
         //  Mybatis Mapper Call
         log.debug(userMapper.getUser());
 
 
         //  JPA
-        userRepository.findAll().forEach(new Consumer<User>() {
+        List<User> users = userRepository.findAll();
+
+        users.forEach(new Consumer<User>() {
             @Override
             public void accept(User user) {
-                log.debug( user.getName() );
+                log.debug(user.getName());
             }
         });
+
+
+        //  set model
+        model.addAttribute("users", users);
 
 
         return "index";
