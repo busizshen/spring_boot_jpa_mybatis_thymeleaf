@@ -9,12 +9,13 @@
 3. JDK 1.8
 
 ##3. 구성
-1. Spring Boot
-2. JPA (Hibernate)
-3. Mybatis
-4. Thymeleaf
-5. H2 Database
-6. Lombok
+1. Maven
+2. Spring Boot
+3. JPA (Hibernate)
+4. Mybatis
+5. Thymeleaf
+6. H2 Database
+7. Lombok
 
 ##4. 실행방법
 1. `git clone https://github.com/wonzopein/spring_jpa_mybatis_thymeleaf.git`
