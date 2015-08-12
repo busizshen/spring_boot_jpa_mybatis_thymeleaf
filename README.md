@@ -20,3 +20,4 @@
 ##4. 실행방법
 1. `git clone https://github.com/wonzopein/spring_jpa_mybatis_thymeleaf.git`
 2. `mvn spring-boot:run`
+3. 브라우저에서 `http://localhost:8080` 접속
