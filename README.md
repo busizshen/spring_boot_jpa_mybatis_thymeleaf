@@ -21,3 +21,6 @@
 1. `git clone https://github.com/wonzopein/spring_jpa_mybatis_thymeleaf.git`
 2. `mvn spring-boot:run`
 3. 브라우저에서 `http://localhost:8080` 접속
+
+---
+[![Build Status](https://travis-ci.org/wonzopein/spring_boot_jpa_mybatis_thymeleaf.svg?branch=master)](https://travis-ci.org/wonzopein/spring_boot_jpa_mybatis_thymeleaf)

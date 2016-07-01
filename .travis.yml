@@ -3,4 +3,4 @@ language:
 jdk:
 - oraclejdk8
 install:
-- mvn package
+- mvn package -DskipTests
